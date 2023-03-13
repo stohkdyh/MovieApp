@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="54sp"
+        android:text="@string/movie_db_app"
+        android:layout_marginTop="50sp"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginHorizontal="29sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="27sp"
+        android:text="@string/find_your_movies"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginTop="22sp"
+        android:layout_marginHorizontal="29sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlined_text_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="252sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29sp"
+        android:layout_marginTop="18sp"
+        app:boxCornerRadiusTopStart="18sp"
+        app:boxCornerRadiusTopEnd="18sp"
+        app:boxCornerRadiusBottomStart="18sp"
+        app:boxCornerRadiusBottomEnd="18sp"
+        android:hint="@string/search"
+        android:textColorHint="@color/textboxwhite"
+        app:boxBackgroundColor="@color/shadow"
+        app:boxStrokeColor="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/outlined_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_light" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="23sp"
+        android:src="@drawable/search"
+        android:background="@drawable/roundcorner"
+        android:backgroundTint="@color/shadow"
+        app:layout_constraintStart_toEndOf="@id/outlined_text_input_layout"
+        app:layout_constraintTop_toBottomOf="@id/tv_title2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
