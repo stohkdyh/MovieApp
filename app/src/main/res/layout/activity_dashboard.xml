@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -71,6 +72,28 @@
         android:backgroundTint="@color/shadow"
         app:layout_constraintStart_toEndOf="@id/outlined_text_input_layout"
         app:layout_constraintTop_toBottomOf="@id/tv_title2"
+        android:contentDescription="@string/search"
         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_categories"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/search_button"
+        android:layout_marginStart="29sp"
+        android:layout_marginTop="18sp"
+        tools:listitem="@layout/item_category"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_film"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31sp"
+        android:layout_marginHorizontal="29sp"
+        app:layout_constraintTop_toBottomOf="@id/rv_categories"
+        tools:listitem="@layout/item_film"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
